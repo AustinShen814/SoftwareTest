@@ -61,7 +61,8 @@ def Currency_Exchange(amount, method):
     #测试用例 3:0美元兑换人民币    预期结果 0人民币
     #测试用例 4:100人民币兑换日元  预期结果 2000日元
     #测试用例 5:100日元兑换美元    预期结果 错误
-    #测试用例 6:-100 日元兑换美元  预期结果 错误
+    #测试用例 6:-100日元兑换美元   预期结果 错误
+    #测试用例 7:0.01人民币兑换美元  预期结果 0.00
 
 
 def main():
@@ -87,6 +88,10 @@ def main():
 
     print("测试用例 6:-100日元兑换美元")
     Currency_Exchange(-100, "jpy_to_usd")
+    print("\n")
+
+    print("测试用例 7:0.01人民币兑换美元")
+    Currency_Exchange(0.01, "cny_to_usd")
 
 
 if __name__ == "__main__":
